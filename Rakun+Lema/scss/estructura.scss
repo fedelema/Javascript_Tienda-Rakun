@@ -1,0 +1,76 @@
+nav {
+    position: fixed;
+    top:0;
+    z-index: 5;
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        li {
+            position: relative;
+            ul {
+                display: none;
+                position: absolute;
+                li {
+                    display: block;
+                }
+            }
+        }
+        li:hover ul {
+            display: block;
+        }
+    }
+}
+
+iframe {
+    align-self: center;
+}
+
+.mainInicio {
+    .mainInicio__ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.formatoMain2C {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+}
+
+.formatoMain1C {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    .productos__lista {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .productos__fotos {
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+.compra {
+    .compra__pagoEnvio {
+        ul {
+            display: inline-block;
+        }
+    }
+}

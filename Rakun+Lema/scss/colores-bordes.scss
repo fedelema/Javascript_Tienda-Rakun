@@ -1,0 +1,113 @@
+$color-borde:turquoise;
+$color-link:turquoise;
+$fondo-prod-1: white;
+$fondo-prod-2: grey;
+$fondo-prod-3: rgb(90, 62, 62);
+$fondo-prod-4: turquoise;
+
+$logos: (ig:rgb(223, 99, 223),wp:rgb(7, 173, 7),gmail:rgb(230, 91, 91),direc:black);
+@each $logo, $color-logo in $logos {
+    .logo--#{$logo} {
+        color: $color-logo;
+    }
+}
+
+$i:1;
+@for $i from 1 through 4 {
+    .estilo-prod-#{$i} {
+        color: black;
+        background-color: fondo-prod-#{$i};
+        text-align: center;
+        font-weight: bold;
+        width: 30%;
+    }
+}
+
+body {
+    background-color:black;
+    color: white;
+}
+
+nav {
+    background-color: black;
+    border-radius: 3px;
+    border-width: 5px;
+    border-bottom: solid;
+    ul {
+        li {
+            a:hover {
+                color: $color-link;
+            }
+            ul {
+                li {
+                    border: solid;
+                    border-width: 1px;
+                    border-color:white;
+                    background-color: black;
+                    a:hover {
+                        color: $color-link;
+                    }
+                }
+            }
+        }
+    }
+}
+
+aside {
+    border-right: solid;
+    border-left: solid;
+    background-color: white;
+    border-color: $color-borde;
+    img {
+        color: black;
+        margin-top: 40px;
+    }
+}
+
+a {
+    color: white;
+}
+
+footer {
+    background-color: white;
+    color: black;
+    border-top: solid;
+    border-color: $color-borde;
+    p {
+        color: black;
+    }
+    a p:hover {
+        color: $color-link;
+    }
+}
+
+.mvv {
+    border-color: $color-borde;
+    background-image: radial-gradient(turquoise,black);
+}
+
+.productos {
+    a:hover {
+        color: $color-link;
+    }
+}
+
+.compra {
+    .compra__pagoEnvio {
+        border-color: $color-borde;
+        background-image: radial-gradient(turquoise,black);
+    }
+}
+
+#linkRB:hover {
+    color: $color-link;
+}
+#linkRG:hover {
+    color: $color-link;
+}
+#linkRR:hover {
+    color: $color-link;
+}
+#linkT:hover {
+    color: $color-link;
+}

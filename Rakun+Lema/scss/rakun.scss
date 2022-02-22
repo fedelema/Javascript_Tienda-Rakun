@@ -1,0 +1,281 @@
+/*@import "../node_modules/bootstrap/scss/bootstrap";*/
+@import "colores-bordes";
+@import "estructura";
+@import "animaciones-botonW-divCarrito";
+
+@mixin space ($margin,$padding) {
+    margin:$margin;
+    padding: $padding;
+}
+
+$ancho: 100%;
+
+body {
+    font-family: 'Kanit', sans-serif;
+    margin:0;
+}
+
+header {
+    margin-top: 80px;
+}
+
+nav {
+    font-size: 15px;
+    font-weight: bold;
+    width: $ancho;
+    background-size: cover;
+    line-height: 10px;
+    ul {
+        list-style-type: none;
+        padding: 30px 20px 20px 20px;
+        li {
+            padding: 10px;
+            ul {
+                list-style-position: outside;
+                li {
+                    width: $ancho*2;
+                    text-align: left;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: unset;
+}
+
+h5 {
+    text-align: center;
+    @include space(50px 0 50px 0,0)
+}
+
+form {
+    text-align: center;
+    margin-top: 50px;
+    legend {
+        text-decoration: underline;
+    }
+    fieldset {
+        width: $ancho*0.8;
+        margin-top: 20px;
+    }
+    label, input {
+        font-family: 'Kanit', sans-serif;
+    }
+}
+
+footer {
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    p {
+        padding: 6px;
+    }
+}
+
+iframe {
+    margin-bottom: 50px;
+}
+
+#seccion-nosotros {
+    margin-bottom: 150px;
+    margin-top: 100px;
+}
+#seccion-productos {
+    margin-bottom: 150px;
+    margin-top: 100px;
+}
+#seccion-como-comprar {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+#seccion-contacto {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.inicio {
+    margin-top: 50px;
+}
+
+.mainInicio {
+    .mainInicio__ul {
+        list-style-type: none;
+        .mainInicio__ul--centrado {
+            text-align: center;
+        }
+        .mainInicio__ul--cursiva {
+            font-style: italic;
+        }
+    }
+    .mainInicio__section {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .mainInicio__carousel {
+        text-transform: uppercase;
+        font-weight: bold;
+        h5 {
+            font-weight: bold;
+        }
+        .mainInicio__carousel--altura {
+            height: 300px;
+        }
+    }
+    .mainInicio__botonProd--centrado {
+        text-align: center;
+    }
+    .mainInicio__botonProd--estilo {
+        @include space(20px 0 0 0,10px);
+        text-align: center;
+        font-weight: bold;
+        font-variant: small-caps;
+        font-size: large;
+    }
+    .mainInicio--titulo {
+        margin-top: 50px;
+        font-variant: small-caps;
+        text-align: center;
+    }
+}
+
+.nosotros {
+    text-align: justify;
+    @include space(70px 70px 20px 70px,0);
+    animation-name: aparecer;
+    animation-duration: 2s;
+    .nosotros--h1 {
+        text-align: center;
+    }
+}
+
+.mvv {
+    @include space(50px 70px 50px 0,20px);
+    animation-name: aparecer;
+    animation-duration: 5s;
+    .mvv__ul {
+        list-style-type: none;
+        .mvv__ul--valores {
+            margin: 0;
+            list-style-position: outside;
+        }
+    }
+}
+
+/*.mainDisenos {
+    text-align: center;
+    font-weight: bold;
+    @include space (50px 20px 20px 20px,20px);
+}
+
+.disenos {
+    @include space (20px 20px 20px 20px,20px);
+}*/
+
+.productos {
+    margin-top: 100px;
+    .productos--titulo {
+        text-align: center;
+    }
+    .productos__lista {
+        text-align: justify;
+        line-height: 30px;
+        @include space(0 50px,0)
+    }
+    .productos__fotos {
+        h2 {
+            margin-top: 100px;
+            text-align: center;
+        }
+        img {
+            @include space(30px 0 30px 0,5px);
+            text-align: center;
+            width: 230px;
+            height: 230px;
+        }
+    }
+}
+
+.compra {
+    .compra__pasos {
+        @include space(100px 20px 100px 20px,0);
+        h1 {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+    }
+    .compra__pagoEnvio {
+        @include space(50px 70px 50px 0,20px);
+        animation-name: aparecer;
+        animation-duration: 5s;
+        ul {
+            @include space(50px 20px 50px 20px,0);
+        }
+    }
+}
+
+.botonForm {
+    text-align: center;
+    @include space(10px 0 50px 0,0);
+    input {
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    nav {
+        ul {
+            list-style-type: none;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li ul li {
+                display: none;
+            }
+        }
+    }
+
+    header {
+        margin-top: 180px;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .mainInicio {
+        .mainInicio__carousel {
+            .mainInicio__carousel--altura {
+                height: 125px;
+            }
+        }
+    }
+
+    .formatoMain2C {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .formatoMain1C {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-content: center;
+    }
+
+    .productos {
+        .productos__lista {
+            text-align: justify;
+            line-height: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

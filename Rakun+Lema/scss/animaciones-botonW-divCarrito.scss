@@ -1,0 +1,86 @@
+@keyframes aparecer {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+main {
+    animation-name: aparecer;
+    animation-duration: 2s;
+}
+
+aside {
+    img:hover {
+        transform: rotate(720deg);
+        /*animation: "animate_animated animate__rollIn";*/
+        transition: all 2s;
+    }
+}
+
+.nosotros {
+    animation-name: aparecer;
+    animation-duration: 2s;
+}
+
+.mvv {
+    animation-name: aparecer;
+    animation-duration: 5s;
+}
+
+.productos {
+    .productos__lista {
+        ul li ul li:hover {
+            transform: translate(10px,0);
+        }
+    }
+    .productos__fotos {
+        img:hover {
+            transform: scale(1.4);
+            transition: all .5s;
+        }
+    }
+}
+
+.compra {
+    .compra__pagoEnvio {
+        animation-name: aparecer;
+        animation-duration: 5s;
+    }
+}
+
+.botonWhatsApp {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    z-index: 2;
+}
+
+.botonWhatsApp:hover {
+    transform: scale(2);
+    bottom:20px;
+    right:20px;
+    transition: all 0.5s;
+}
+
+.divCarrito {
+    background-color: black;
+    border-radius: 20px;
+    border: solid;
+    border-color: turquoise;
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    z-index: 2;
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.barra-rapida {
+    border: solid;
+    border-color: white;
+}
